@@ -30,6 +30,7 @@ public class SistemaFinancieroMainPage extends javax.swing.JFrame {
         cancelButton = new javax.swing.JButton();
         entrarButton = new javax.swing.JButton();
         mainPanel = new javax.swing.JPanel();
+        jPanel1 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         copyrightLabel = new javax.swing.JLabel();
 
@@ -40,18 +41,18 @@ public class SistemaFinancieroMainPage extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         usernameLabel.setText("Nombre de Usuario:");
-        getContentPane().add(usernameLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 190, -1, -1));
+        getContentPane().add(usernameLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 210, -1, -1));
 
         passwordLabel.setText("Contraseña: ");
-        getContentPane().add(passwordLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 220, -1, -1));
+        getContentPane().add(passwordLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 240, -1, -1));
 
         usernameTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 usernameTextFieldActionPerformed(evt);
             }
         });
-        getContentPane().add(usernameTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 190, 90, -1));
-        getContentPane().add(mainPasswordField, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 220, 90, -1));
+        getContentPane().add(usernameTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 210, 90, -1));
+        getContentPane().add(mainPasswordField, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 240, 90, -1));
 
         cancelButton.setText("Salir");
         cancelButton.addActionListener(new java.awt.event.ActionListener() {
@@ -59,7 +60,7 @@ public class SistemaFinancieroMainPage extends javax.swing.JFrame {
                 cancelButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(cancelButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 260, -1, -1));
+        getContentPane().add(cancelButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 280, -1, -1));
 
         entrarButton.setText("Entrar");
         entrarButton.addActionListener(new java.awt.event.ActionListener() {
@@ -67,36 +68,55 @@ public class SistemaFinancieroMainPage extends javax.swing.JFrame {
                 entrarButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(entrarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 260, -1, -1));
+        getContentPane().add(entrarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 280, -1, -1));
 
         mainPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 51, 204)));
         mainPanel.setToolTipText("");
 
+        jPanel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 51, 204));
         jLabel3.setText("SIFIP - Sistema Financiero Personal");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(48, 48, 48)
+                .addComponent(jLabel3)
+                .addContainerGap(53, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(42, 42, 42)
+                .addComponent(jLabel3)
+                .addContainerGap(47, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout mainPanelLayout = new javax.swing.GroupLayout(mainPanel);
         mainPanel.setLayout(mainPanelLayout);
         mainPanelLayout.setHorizontalGroup(
             mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(mainPanelLayout.createSequentialGroup()
-                .addGap(62, 62, 62)
-                .addComponent(jLabel3)
-                .addContainerGap(55, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         mainPanelLayout.setVerticalGroup(
             mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(mainPanelLayout.createSequentialGroup()
-                .addGap(41, 41, 41)
-                .addComponent(jLabel3)
-                .addContainerGap(43, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         getContentPane().add(mainPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 670, -1));
 
         copyrightLabel.setText("Universidad de Santander - Proyecto Integrador I - 2024");
-        getContentPane().add(copyrightLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 310, -1, 20));
+        getContentPane().add(copyrightLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 330, -1, 20));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -127,6 +147,7 @@ public class SistemaFinancieroMainPage extends javax.swing.JFrame {
         }
         else{
             JOptionPane.showMessageDialog(rootPane, "Usuario y/o contraseña incorrectos.", "Error", JOptionPane.ERROR_MESSAGE);
+            mainPasswordField.setText("");
         }
     }//GEN-LAST:event_entrarButtonActionPerformed
 
@@ -171,6 +192,7 @@ public class SistemaFinancieroMainPage extends javax.swing.JFrame {
     private javax.swing.JLabel copyrightLabel;
     private javax.swing.JButton entrarButton;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel mainPanel;
     private javax.swing.JPasswordField mainPasswordField;
     private javax.swing.JLabel passwordLabel;

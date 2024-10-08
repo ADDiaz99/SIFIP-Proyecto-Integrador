@@ -86,6 +86,9 @@ public class WelcomePage extends javax.swing.JFrame {
 
         jPanel2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel2MouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 jPanel2MouseEntered(evt);
             }
@@ -330,6 +333,13 @@ public class WelcomePage extends javax.swing.JFrame {
         // Mouse sale del panel:
         jPanel5.setBackground(null);
     }//GEN-LAST:event_jPanel5MouseExited
+
+    private void jPanel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel2MouseClicked
+        // Boton Balance General en click:
+        Balance bal = new Balance();
+        bal.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jPanel2MouseClicked
        
     /**
      * @param args the command line arguments
