@@ -149,6 +149,17 @@ public class SistemaFinancieroMainPage extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(rootPane, "Usuario y/o contraseña incorrectos.", "Error", JOptionPane.ERROR_MESSAGE);
             mainPasswordField.setText("");
         }
+        
+//         if (usuario.equals("Nicole") && password.equals("luna")){
+//            WelcomePage next = new WelcomePage();
+//            JOptionPane.showMessageDialog(rootPane, "Datos de Ingreso Correctos.\nBienvenidegy, Nicole.\n\nPresione OK para entrar al menú principal.", "Inicio de Sesión Exitoso", JOptionPane.PLAIN_MESSAGE);
+//            next.setVisible(true);
+//            dispose();
+//        }
+//        else{
+//            JOptionPane.showMessageDialog(rootPane, "Usuario y/o contraseña incorrectos.", "Error", JOptionPane.ERROR_MESSAGE);
+//            mainPasswordField.setText("");
+//        }
     }//GEN-LAST:event_entrarButtonActionPerformed
 
     /**
