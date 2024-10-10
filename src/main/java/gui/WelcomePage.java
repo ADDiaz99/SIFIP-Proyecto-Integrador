@@ -154,6 +154,9 @@ public class WelcomePage extends javax.swing.JFrame {
 
         jPanel4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel4MouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 jPanel4MouseEntered(evt);
             }
@@ -162,16 +165,16 @@ public class WelcomePage extends javax.swing.JFrame {
             }
         });
 
-        jLabel7.setText("Recursos Educacionales");
+        jLabel7.setText("Biblioteca");
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                .addContainerGap(15, Short.MAX_VALUE)
+                .addContainerGap(47, Short.MAX_VALUE)
                 .addComponent(jLabel7)
-                .addContainerGap())
+                .addGap(45, 45, 45))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -340,6 +343,12 @@ public class WelcomePage extends javax.swing.JFrame {
         bal.setVisible(true);
         dispose();
     }//GEN-LAST:event_jPanel2MouseClicked
+
+    private void jPanel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel4MouseClicked
+            // Boton Click Biblioteca:
+            VentanaConLinks vn = new VentanaConLinks();
+            vn.setVisible(true);
+    }//GEN-LAST:event_jPanel4MouseClicked
        
     /**
      * @param args the command line arguments

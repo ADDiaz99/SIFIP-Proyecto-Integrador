@@ -4,6 +4,8 @@
  */
 package gui;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author USUARIO
@@ -142,6 +144,11 @@ public class Perfil extends javax.swing.JFrame {
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 110, 150, 130));
 
         jButton2.setText("Guardar");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 310, -1, -1));
 
         pack();
@@ -153,6 +160,12 @@ public class Perfil extends javax.swing.JFrame {
         wlcm.setVisible(true);
         dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // Boton de Guardar
+        JOptionPane.showMessageDialog(rootPane, "Los datos del perfil han sido actualizados correctamente.", 
+                "Datos Actualizados", JOptionPane.INFORMATION_MESSAGE);
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
