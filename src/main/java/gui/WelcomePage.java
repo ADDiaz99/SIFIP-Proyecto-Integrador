@@ -254,7 +254,6 @@ public class WelcomePage extends javax.swing.JFrame {
 
         jLabel2.setText("Balance:");
 
-        jTextField1.setBackground(null);
         jTextField1.setText("25668");
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
