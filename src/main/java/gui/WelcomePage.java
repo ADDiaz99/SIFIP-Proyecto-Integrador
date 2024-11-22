@@ -48,10 +48,11 @@ public class WelcomePage extends javax.swing.JFrame {
         panelIzquierdo = new javax.swing.JPanel();
         panelIzquierdoInformacion = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
         panelDerechoInformacion = new javax.swing.JPanel();
         panelDerechoMensaje = new javax.swing.JPanel();
         welcomeName = new javax.swing.JLabel();
+        jPanel6 = new javax.swing.JPanel();
+        jLabel4 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
@@ -61,7 +62,6 @@ public class WelcomePage extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("SIFIP - Menú Principal");
         setMinimumSize(new java.awt.Dimension(710, 400));
-        setPreferredSize(new java.awt.Dimension(800, 500));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -198,7 +198,7 @@ public class WelcomePage extends javax.swing.JFrame {
                 .addContainerGap(14, Short.MAX_VALUE))
         );
 
-        getContentPane().add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 320, 150, 40));
+        getContentPane().add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 360, 150, 40));
 
         jPanel8.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
@@ -252,34 +252,23 @@ public class WelcomePage extends javax.swing.JFrame {
 
         panelIzquierdoInformacion.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 102, 255), 1, true));
 
-        jLabel2.setText("Balance:");
-
-        jTextField1.setText("25668");
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
-            }
-        });
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/budget_781760.png"))); // NOI18N
 
         javax.swing.GroupLayout panelIzquierdoInformacionLayout = new javax.swing.GroupLayout(panelIzquierdoInformacion);
         panelIzquierdoInformacion.setLayout(panelIzquierdoInformacionLayout);
         panelIzquierdoInformacionLayout.setHorizontalGroup(
             panelIzquierdoInformacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelIzquierdoInformacionLayout.createSequentialGroup()
-                .addContainerGap(17, Short.MAX_VALUE)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addContainerGap(46, Short.MAX_VALUE)
+                .addComponent(jLabel2)
+                .addGap(42, 42, 42))
         );
         panelIzquierdoInformacionLayout.setVerticalGroup(
             panelIzquierdoInformacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelIzquierdoInformacionLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(panelIzquierdoInformacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2))
-                .addContainerGap(164, Short.MAX_VALUE))
+                .addGap(55, 55, 55)
+                .addComponent(jLabel2)
+                .addContainerGap(73, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout panelIzquierdoLayout = new javax.swing.GroupLayout(panelIzquierdo);
@@ -346,6 +335,40 @@ public class WelcomePage extends javax.swing.JFrame {
         );
 
         getContentPane().add(panelDerechoInformacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(448, 150, -1, 210));
+
+        jPanel6.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel6MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jPanel6MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jPanel6MouseExited(evt);
+            }
+        });
+
+        jLabel4.setText("Calculadora de Prestamos");
+
+        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
+        jPanel6.setLayout(jPanel6Layout);
+        jPanel6Layout.setHorizontalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel4)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel6Layout.setVerticalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel4)
+                .addContainerGap(14, Short.MAX_VALUE))
+        );
+
+        getContentPane().add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 300, -1, 40));
 
         jMenu1.setText("File");
         jMenuBar1.add(jMenu1);
@@ -428,9 +451,7 @@ public class WelcomePage extends javax.swing.JFrame {
 
     private void jPanel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel2MouseClicked
         // Boton Balance General en click:
-        Balance bal = new Balance();
-        bal.setVisible(true);
-        dispose();
+        BalanceTableApp bal = new BalanceTableApp();
     }//GEN-LAST:event_jPanel2MouseClicked
 
     private void jPanel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel4MouseClicked
@@ -439,9 +460,21 @@ public class WelcomePage extends javax.swing.JFrame {
             vn.setVisible(true);
     }//GEN-LAST:event_jPanel4MouseClicked
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void jPanel6MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel6MouseEntered
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+        jPanel6.setBackground(new Color(51,102,255));
+    }//GEN-LAST:event_jPanel6MouseEntered
+
+    private void jPanel6MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel6MouseExited
+        // TODO add your handling code here:
+        jPanel6.setBackground(null);
+    }//GEN-LAST:event_jPanel6MouseExited
+
+    private void jPanel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel6MouseClicked
+        // TODO add your handling code here:
+        CalculadoraPrestamos cm = new CalculadoraPrestamos();
+        cm.setVisible(rootPaneCheckingEnabled);
+    }//GEN-LAST:event_jPanel6MouseClicked
        
     /**
      * @param args the command line arguments
@@ -483,6 +516,7 @@ public class WelcomePage extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
@@ -494,9 +528,9 @@ public class WelcomePage extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JPanel panelDerechoInformacion;
     private javax.swing.JPanel panelDerechoMensaje;
     private javax.swing.JPanel panelIzquierdo;

@@ -59,7 +59,9 @@ public class Balance extends javax.swing.JFrame {
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null},
+                {"Alimentos", "10/10/2024", "Gasto", "Transacción", "186545"},
+                {"Salario", "15/10/2024", "Ingreso", "Bancolombia", "2200000"},
+                {"Juegos", "12/11/2024", "Gasto", "Davivienda", "65875"},
                 {null, null, null, null, null},
                 {null, null, null, null, null},
                 {null, null, null, null, null},
